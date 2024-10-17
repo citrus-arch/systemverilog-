@@ -19,7 +19,7 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
-
+//source code
 module mux21(
     input logic s,
     input logic d0,
@@ -27,4 +27,20 @@ module mux21(
     output logic  y
     );
     assign y=s?d1:d0;
+endmodule
+
+//testbench code
+module mux21_tb();
+logic s;
+logic d0;
+logic d1;
+logic y;
+mux21 uut(s,d0,d1,y);
+initial
+begin
+d0=1'b0; d1=1'b1;
+s=1'b0; #10;
+s=1'b1; #10;
+$finish;
+end
 endmodule
