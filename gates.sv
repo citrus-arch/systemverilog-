@@ -29,8 +29,6 @@ endmodule
 
 //testbench code 
 module gates_tb();
-// Code your testbench here
-// or browse Examples
   logic a;
   logic y;
   gates uut(a,y);
